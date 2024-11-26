@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bland Hudson - Tennis Coach, Sports Integrator, and Affiliate Marketer. Explore coaching and sponsorship opportunities and discover sports gear.">
+  <title>Bland Hudson - Sports Affiliate Website</title>
+  <style>
+    /* Light pastel theme */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F7F4F4; /* Light pastel background */
+      color: #333;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      background-color: #B3C2F2; /* Pastel blue */
+      color: #333;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      text-align: center;
+      margin: 20px;
+      border: 1px solid #E2D7D7; /* Soft border */
+      border-radius: 8px;
+      background-color: #FFF9F9;
+    }
+    #products .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    #products .product {
+      border: 1px solid #ddd;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+      background-color: #E9E9F2; /* Light pastel shade */
+      border-radius: 8px;
+    }
+    footer {
+      width: 100%;
+      background-color: #C1B8E6; /* Pastel purple */
+      color: #333;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Bland Hudson</h1>
+    <p>Tennis Coach | Sports Integrator | Affiliate Marketer</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#coaching">Coaching</a></li>
+        <li><a href="#sponsorship">Sponsorship</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Bland Hudson, a dedicated tennis coach with a passion for integrating various sports into training programs, including Frisbee Golf and Ultimate Frisbee. Feel free to reach out if you're interested in joining or supporting our programs!</p>
+  </section>
+
+  <!-- Product Listings Section -->
+  <section id="products">
+    <h2>Featured Products</h2>
+    <div class="product-list">
+      <!-- JavaScript will dynamically insert products here -->
+    </div>
+  </section>
+
+  <!-- Coaching Opportunities Section -->
+  <section id="coaching">
+    <h2>Coaching Opportunities</h2>
+    <p>If you're passionate about sports and want to enhance your skills or become a coach, I offer personalized training. Contact me for available opportunities!</p>
+  </section>
+
+  <!-- Sponsorship Section -->
+  <section id="sponsorship">
+    <h2>Sponsorship Opportunities</h2>
+    <p>We're seeking sponsors for sports programs, including tennis, Frisbee Golf, and Ultimate Frisbee. Sponsorship can bring visibility to your brand while supporting community growth.</p>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog">
+    <h2>Blog</h2>
+    <p>Check out my blog where I share insights on sports coaching, affiliate marketing tips, and sports-related topics.</p>
+    <button onclick="readBlog()">Read my latest posts</button>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you have questions or want to get involved, reach out!</p>
+    <p>Email: blandhudson555@gmail.com</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Thank you for visiting my website!</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Sample products for display
+    const products = [
+      { name: 'Tennis Racket', price: '$59.99' },
+      { name: 'Frisbee', price: '$9.99' },
+      { name: 'Golf Discs Set', price: '$25.99' }
+    ];
+
+    // Display products in the Products section
+    function displayProducts() {
+      const productList = document.querySelector('.product-list');
+      productList.innerHTML = '';
+      products.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.className = 'product';
+        productDiv.innerHTML = `
+          <h3>${product.name}</h3>
+          <p>Price: ${product.price}</p>
+        `;
+        productList.appendChild(productDiv);
+      });
+    }
+
+    // Mock function to simulate blog reading
+    function readBlog() {
+      alert("Visit my blog for the latest updates on sports coaching and affiliate marketing!");
+    }
+
+    // Initialize products on page load
+    document.addEventListener('DOMContentLoaded', displayProducts);
+  </script>
+</body>
+</html>
